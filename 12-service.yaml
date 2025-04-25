@@ -8,7 +8,7 @@ spec:
     project: expense 
     componet: backend 
     environment: dev 
-    version: 1.0.0 
+    version: "1.0.0" 
   ports: 
   - protocol: TCP 
     port: 80 # service port 
@@ -22,11 +22,10 @@ metadata:
   labels: 
     project: expense 
     component: backend 
-    environment: dev 
-    version: 1.0.0 
+    environment: dev  
+    version: "1.0.0" 
 spec: 
   containers:
     - image: nginx
       name: nginx
-      ports: 
-        - containerPort: 80 
+     
