@@ -9,24 +9,24 @@ spec:
     component: backend 
     environement: dev 
     version: "1.0.0"
-    demo: Lb
+    demo: lb
   ports:
   - protocol: TCP 
     port: 80 
     targetPort: 80 
-    nodePort: 30007
+    nodePort: 30008
 
 --- 
 apiVersion: v1 
 kind: Pod 
 metadata: 
-  name: backend-Lb
+  name: backend-lb
   labels: 
     project: expense 
     component: backend 
     environement: dev 
     version: "1.0.0"
-    demp: Lb
+    demp: lb
 spec: 
   containers: 
   - name: nginx 
