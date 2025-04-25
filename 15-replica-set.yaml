@@ -12,7 +12,7 @@ spec:
     matchLabels:
       app: frontend 
       tier: web 
-  templates: 
+  template: 
     metadata: 
       labels: 
         app: frontend 
