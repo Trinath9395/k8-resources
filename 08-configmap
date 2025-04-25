@@ -1,0 +1,7 @@
+kind: Configmap
+apiVersion: v1 
+metadata: 
+  name: MyConfigmap 
+data: 
+  Course: "Kubernetes"
+  Duration: "20HR"
