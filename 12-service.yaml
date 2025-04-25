@@ -23,6 +23,7 @@ metadata:
     project: expense 
     component: backend 
     environment: dev 
+    version: 1.0.0 
 spec: 
   containers:
     - image: nginx
