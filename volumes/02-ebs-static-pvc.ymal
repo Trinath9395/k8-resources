@@ -10,3 +10,21 @@ spec:
   resources:
     requests:
       storage: 2Gi
+
+
+--- 
+apiVersion: v1 
+kind: Pod
+metadate: 
+  name: ebs-claim 
+spec: 
+  containers: 
+  - name: nginx 
+    image: nginx 
+    VolumeMounts: 
+    - name: Persistent-Storage 
+      mountPath: /usr/share/nginx/html
+  Volumes: 
+  - name: Persistent-Storage
+    PersistentVolumeClaim:
+      claimName: ebs-claim 
