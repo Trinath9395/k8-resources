@@ -20,6 +20,6 @@ spec:
       mountPath: /secrets 
   volumes:
   - name:  secret-volume
-    mountPath: {}
+    emptyDir: {}
     
     
