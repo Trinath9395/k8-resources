@@ -19,7 +19,7 @@ spec:
     - name: secret-volume 
       mountPath: /secrets 
   volumes:
-  - name:  secret-volume
+  - name: secret-volume
     emptyDir: {}
     
     
