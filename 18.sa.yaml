@@ -10,14 +10,14 @@ spec:
     image: amazon/aws-cli
     command:  ['sh', '-c', 'aws secretsmanager get-secret-value --secret-id expense/mysql/creds --query SecretString --output text > /secrets/.env ']
     volumeMounts:
-    - name: secrete-volume
-      mountPath: /secrets
-  containers: 
-  - name: nginx 
-    image: nginx 
-    volumeMounts: 
-    - name: secret-volume 
-      mountPath: /secrets 
+    - mountPath: /secrets
+      name: secret-volume
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - mountPath: /secrets
+      name: secret-volume
   volumes:
   - name: secret-volume
     emptyDir: {}
